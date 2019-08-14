@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Ownerlistens_Messagemate>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Ownerlistens_Messagemate>
+    </modules>
+</config>

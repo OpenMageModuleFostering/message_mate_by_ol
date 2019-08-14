@@ -1,0 +1,11 @@
+<?php
+try {
+    $enabled = Mage::getStoreConfig('ownerlistens/config/enabled');
+    if ($enabled) {
+        echo Mage::getStoreConfig('ownerlistens/config/message_mate');
+    } else {
+        // nothing to do..
+    }
+} catch (Exception $e) {
+    // do nothing..
+}

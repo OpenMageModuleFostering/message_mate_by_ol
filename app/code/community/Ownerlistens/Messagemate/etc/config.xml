@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <modules>
+        <Ownerlistens_Messagemate>
+            <version>1.0.0</version>
+        </Ownerlistens_Messagemate>
+    </modules>
+    <global>
+        <models>
+            <ownerlistens_messagemate>
+                <class>Ownerlistens_Messagemate_Model</class>
+            </ownerlistens_messagemate>
+        </models>
+        <helpers>
+            <ownerlistens_messagemate>
+                <class>Ownerlistens_Messagemate_Helper</class>
+            </ownerlistens_messagemate>
+        </helpers>
+        <blocks>
+            <ownerlistens_messagemate>
+                <class>Ownerlistens_Messagemate_Block</class>
+            </ownerlistens_messagemate>
+        </blocks>
+        <resources>
+            <ownerlistens_messagemate_setup>
+                <setup>
+                    <module>Ownerlistens_Messagemate</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </ownerlistens_messagemate_setup>
+            <ownerlistens_messagemate_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </ownerlistens_messagemate_write>
+            <ownerlistens_messagemate_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </ownerlistens_messagemate_read>
+        </resources>
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <ownerlistens_messagemate before="Mage_Adminhtml">Ownerlistens_Messagemate_Adminhtml</ownerlistens_messagemate>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <ownerlistens translate="label" module="ownerlistens_messagemate">
+                                            <title>Ownerlistens</title>
+                                        </ownerlistens>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+    <default>
+        <ownerlistens>
+            <config>
+                <enabled>1</enabled>
+            </config>
+        </ownerlistens>
+    </default>
+
+    <frontend>
+        <layout>
+            <updates>
+                <messagemate_layout module="ownerlistens_messagemate">
+                    <file>ownerlistens_messagemate.xml</file>
+                </messagemate_layout>
+            </updates>
+        </layout>
+    </frontend>
+</config>

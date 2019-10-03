@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Message_Mate_by_OL",
+    "name": "OpenMageModuleFostering\/Message_Mate_by_OL",
     "type": "magento-module",
     "license": "OwnerListens-Custom-License",
     "homepage": "",
     "description": "Message Mate, by OwnerListens,  adds a secure and simple texting solution to your website",
     "authors": [
-    {
-        "name": "Niv Caner",
-        "email": "niv@ownerlistens.com"
-    }
-],
+        {
+            "name": "Niv Caner",
+            "email": "niv@ownerlistens.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
